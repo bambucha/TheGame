@@ -11,10 +11,10 @@ namespace ActionRPG
 {
     public partial class Form1 : Form
     {
-        public Brush brush1 = new SolidBrush(Color.Yellow);
+        public Brush brush1 = new SolidBrush(Color.Blue);
         public Pen pen1 = new Pen(Color.Black);
         public static Image testimage = Image.FromFile("data/testimage.png");
-        public static Image testimage2 = Image.FromFile("data/mc.gif");
+        public static Image testimage2 = Image.FromFile("data/mc.png");
         public Image backgroundimage1 = Image.FromFile("data/background1.jpg");
         int PosX = -1500;
         int PosY = -1500; 
@@ -22,22 +22,17 @@ namespace ActionRPG
         Boolean keyLeftpressed = false;
         Boolean keyRightpressed = false;
         Boolean keyUppressed = false;
+        Boolean keyDownpressed = false;
+        Boolean MCHits = false;
         int moveOffset = 0;
         static int enemyNumber = 1;
+
+
         public enum GameState { Loading, Paused, ActiveGame };
         GameState gameState = GameState.ActiveGame;
         Enemy[] enemy = new Enemy[enemyNumber];
         MC mc = new MC();
 
-
-        /*
-       static int imageSizeX = 40;
-       static int imageSizeY = 40;
-       int counter = 0;
-       Boolean proba = true;
-       int[,] a;
-       int var4e = 0;
-       */
 
         public class MC
         {
@@ -56,6 +51,7 @@ namespace ActionRPG
             public int LineOfSight = 250;
             public int ChaseDistance = 350;
             public int enemyType = 0;
+            public int bodyRange;
             public int movementSpeed = 15; //the lower the faster
             public Boolean EnemySpotted = false;
             public Boolean lives = false;
@@ -67,6 +63,7 @@ namespace ActionRPG
                 this.PosY = PosY;
                 centerPosX = PosX + testimage.Width /2;
                 centerPosY = PosY + testimage.Height /2;
+                bodyRange = (testimage.Height + testimage.Width) / 4;
                 this.enemyType = enemyType;
                 lives = true;
             }
@@ -195,33 +192,6 @@ namespace ActionRPG
                                     (float)Math.Abs(bottom - top));
             }
         }
-        /*
-        public void func()
-        {
-            int x1 = PosX;
-            int y1 = PosY;
-            int x2 = 450;
-            int y2 = 500;
-            float m = (y2 - y1) / (x2 - x1);
-            float b = y1 - m * x1;
-            int x3, y3;
-            a = new int[2, 3000];
-
-            x3 = x1;
-
-            do
-            {
-                y3 = (int) (m * x3 + b);
-                a[0, counter] = x3;
-                a[1, counter] = y3;
-                counter++;
-                x3++;
-            }
-            while (x3 < x2);
-
-            proba = true;
-        }
-         */
 
         protected override void OnKeyDown(KeyEventArgs keyEvent)
         {
@@ -236,6 +206,14 @@ namespace ActionRPG
             if ((keyEvent.KeyCode == Keys.Up) && (!keyUppressed))
             {
                 keyUppressed = true;
+            }
+            if ((keyEvent.KeyCode == Keys.Down) && (!keyDownpressed))
+            {
+                keyDownpressed = true;
+            }
+            if (keyEvent.KeyCode == Keys.A)
+            {
+                MCHits = true;
             }
         }
 
@@ -254,7 +232,14 @@ namespace ActionRPG
             {
                 keyUppressed = false;
             }
+            if (keyEvent.KeyCode == Keys.Down)
+            {
+                keyDownpressed = false;
+            }
         }
+
+
+        int hitRange = 70;
 
         public void MovementModificators()
         {
@@ -262,6 +247,10 @@ namespace ActionRPG
             if (keyUppressed)
             {
                 moveOffset = 30;
+            }
+            else if (keyDownpressed)
+            {
+                moveOffset = -10;
             }
 
             if (keyLeftpressed)
@@ -290,7 +279,7 @@ namespace ActionRPG
             }
         }
 
-        int distanceX, distanceY, distanceToEnemy;
+        int distanceX, distanceY, distanceToEnemy, distanceToHit;
         double enemyangle;
 
 
@@ -311,17 +300,18 @@ namespace ActionRPG
 
                     if (distanceToEnemy < enemy[i].LineOfSight)
                     {
-                        enlargement += 20;
+                        enlargement += 10;
                         //enemy[i].EnemySpotted = true;
                         enemy[i].charges = true;
                     }
 
                     if (distanceToEnemy > enemy[i].ChaseDistance)
                     {
-                        enlargement -= 20;
+                        enlargement -= 10;
                         //enemy[i].EnemySpotted = true;
                         enemy[i].charges = false;
                     }
+
 
                 }
 
@@ -338,23 +328,34 @@ namespace ActionRPG
 
                 }
 
+                
                 if (distanceY == 0)
                 {
-                    enemyangle = 0;
+                    //enemyangle = 0;
                 }
+                 
                 else
                 {
-                   // enemyangle = Math.Atan(distanceX / distanceY);
                     enemyangle = Math.Atan2(distanceY, distanceX);
                     enemyangle = PointMath.RadianToDegree(enemyangle) + 90;
-                    /*
-                    if ((Math.Abs(enemyangle % 360) > 90) && (Math.Abs(enemyangle % 360) < 270))
-                    {
-                        enemyangle = -enemyangle;
-                    }
-                    */
                 }
-            
+
+
+                if ((MCHits) && (distanceToEnemy < (hitRange + enemy[i].bodyRange)))
+                {
+                    int distanceToHitX, distanceToHitY;
+                    int hitPointX, hitPointY;
+
+                    hitPointX = mc.PosX - (int)((Math.Sin(PointMath.DegreeToRadian(-angle))) * hitRange);
+                    hitPointY = mc.PosY - (int)((Math.Cos(PointMath.DegreeToRadian(-angle))) * hitRange);
+                    distanceToHitX = hitPointX - enemy[i].centerPosX;
+                    distanceToHitY = hitPointY - enemy[i].centerPosY;
+                    distanceToHit = (int)(Math.Sqrt(distanceToHitX * distanceToHitX + distanceToHitY * distanceToHitY));
+                    if (distanceToHit < enemy[i].bodyRange)
+                    {
+                        enemy[i].lives = false;
+                    }
+                }
 
                 if (enemy[i].lives)
                 {
@@ -363,15 +364,13 @@ namespace ActionRPG
                 }
                 Font font2 = new Font("Courier New", 15, FontStyle.Bold);
                 g.DrawString("enemyangle      " + enemyangle.ToString(), font2, brush1, 0, 20);
-                g.DrawString("distanceX       " + distanceX.ToString(), font2, brush1, 0, 80);
-                g.DrawString("distanceY       " + distanceY.ToString(), font2, brush1, 0, 100);
             }
         }
 
         private void AnimationWindow_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-
+             
             switch (gameState)
             {
                 case GameState.ActiveGame:
@@ -379,20 +378,23 @@ namespace ActionRPG
                         g.DrawImage(backgroundimage1, PosX, PosY);
                         Font font2 = new Font("Courier New", 15, FontStyle.Bold);
                         g.DrawString("MC X,Y          " + mc.PosX.ToString() + " , " + mc.PosY.ToString(), font2, brush1, 0, 0);
-                        //g.DrawString("enemy0 X,Y      " + enemy[0].PosX.ToString() + " , " + enemy[0].PosY.ToString(), font2, brush1, 0, 40);
-                        //g.DrawString("enemy0 cent X,Y " + enemy[0].centerPosX.ToString() + " , " + enemy[0].centerPosY.ToString(), font2, brush1, 0, 60);
-                        //g.DrawString("angle           " + angle.ToString(), font2, brush1, 0, 80);
+                        g.DrawString("angle           " + angle.ToString(), font2, brush1, 0, 80);
                        
-                        g.DrawString("distanceToEnemy " + distanceToEnemy.ToString(), font2, brush1, 0, 40);
-
+                        g.DrawString("distanceToHit   " + distanceToHit.ToString(), font2, brush1, 0, 40);
+                        
 
                         
                         MovementModificators();
 
                         enemyHandler(e);
-
+                        if (MCHits)
+                        {
+                            g.FillEllipse(brush1, (AnimationWindow.Width / 2) - (int)(Math.Sin(PointMath.DegreeToRadian(-angle)) * hitRange), (AnimationWindow.Height / 2) - (int)(Math.Cos(PointMath.DegreeToRadian(-angle)) * hitRange), 10, 10);
+                            MCHits = false;
+                        }
                         g.DrawImage(RotateImage(testimage2, angle), (AnimationWindow.Width / 2) - (testimage2.Width / 2), (AnimationWindow.Height / 2) - (testimage2.Height / 2));
 
+                        
                         break;
                     }
                 case GameState.Paused:
@@ -408,17 +410,6 @@ namespace ActionRPG
                         gameState = GameState.ActiveGame;
                         break;
                     }
-
-                    /*
-                if (!proba)
-                    func();
-
-                if (var4e < counter)
-                {
-                    g.DrawImage(testimage, a[0, var4e], a[1, var4e], imageSizeX, imageSizeY);
-                    var4e += 2;
-                }
-                 */
             }
         }
 

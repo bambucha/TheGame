@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ActionRPG">
+</Property><Property Name="Solution File" Value="C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\ActionRPG\ActionRPG.sln">
+</Property><Property Name="User Options File" Value="C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\ActionRPG\ActionRPG.suo">
+</Property><Property Name="Date" Value="Thursday, September 23, 2010">
+</Property><Property Name="Time" Value="14:24 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ActionRPG.sln" Description="File successfully backed up as C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\ActionRPG\Backup\ActionRPG.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ActionRPG.suo" Description="File successfully backed up as C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\ActionRPG\Backup\ActionRPG.suo">
+</Event><Event ErrorLevel="0" Project="ActionRPG" Source="ActionRPG\ActionRPG.csproj" Description="Project file successfully backed up as C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\ActionRPG\Backup\ActionRPG\ActionRPG.csproj">
+</Event><Event ErrorLevel="0" Project="ActionRPG" Source="ActionRPG\Form1.cs" Description="File successfully backed up as C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\ActionRPG\Backup\ActionRPG\Form1.cs">
+</Event><Event ErrorLevel="0" Project="ActionRPG" Source="ActionRPG\Form1.Designer.cs" Description="File successfully backed up as C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\ActionRPG\Backup\ActionRPG\Form1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ActionRPG" Source="ActionRPG\Program.cs" Description="File successfully backed up as C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\ActionRPG\Backup\ActionRPG\Program.cs">
+</Event><Event ErrorLevel="0" Project="ActionRPG" Source="ActionRPG\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\ActionRPG\Backup\ActionRPG\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ActionRPG" Source="ActionRPG\Properties\Resources.Designer.cs" Description="File successfully backed up as C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\ActionRPG\Backup\ActionRPG\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ActionRPG" Source="ActionRPG\Properties\Settings.Designer.cs" Description="File successfully backed up as C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\ActionRPG\Backup\ActionRPG\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ActionRPG" Source="ActionRPG\Properties\Settings.settings" Description="File successfully backed up as C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\ActionRPG\Backup\ActionRPG\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="ActionRPG" Source="ActionRPG\Form1.resx" Description="File successfully backed up as C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\ActionRPG\Backup\ActionRPG\Form1.resx">
+</Event><Event ErrorLevel="0" Project="ActionRPG" Source="ActionRPG\Properties\Resources.resx" Description="File successfully backed up as C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\ActionRPG\Backup\ActionRPG\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="ActionRPG" Source="ActionRPG\ActionRPG.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ActionRPG" Source="ActionRPG\ActionRPG.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ActionRPG.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ActionRPG.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ActionRPG" Source="ActionRPG\ActionRPG.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
