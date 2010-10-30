@@ -1,8 +1,0 @@
-bin\Debug\ActionRPG.exe
-bin\Debug\ActionRPG.pdb
-obj\Debug\ResolveAssemblyReference.cache
-obj\Debug\ActionRPG.Form1.resources
-obj\Debug\ActionRPG.Properties.Resources.resources
-obj\Debug\ActionRPG.csproj.GenerateResource.Cache
-obj\Debug\ActionRPG.exe
-obj\Debug\ActionRPG.pdb

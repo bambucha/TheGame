@@ -1,8 +1,0 @@
-C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\ActionRPG\ActionRPG\obj\Debug\ActionRPG.exe
-C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\ActionRPG\ActionRPG\obj\Debug\ActionRPG.pdb
-C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\ActionRPG\ActionRPG\bin\Debug\ActionRPG.exe
-C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\ActionRPG\ActionRPG\bin\Debug\ActionRPG.pdb
-C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\ActionRPG\ActionRPG\obj\Debug\ResolveAssemblyReference.cache
-C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\ActionRPG\ActionRPG\obj\Debug\ActionRPG.Form1.resources
-C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\ActionRPG\ActionRPG\obj\Debug\ActionRPG.Properties.Resources.resources
-C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\ActionRPG\ActionRPG\obj\Debug\ActionRPG.csproj.GenerateResource.Cache
