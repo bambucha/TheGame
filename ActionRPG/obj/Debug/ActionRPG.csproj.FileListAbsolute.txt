@@ -6,3 +6,14 @@ C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\ActionRPG\ActionRPG\obj\Debug\ActionRPG.Form1.resources
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\ActionRPG\ActionRPG\obj\Debug\ActionRPG.Properties.Resources.resources
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\ActionRPG\ActionRPG\obj\Debug\ActionRPG.csproj.GenerateResource.Cache
+E:\ActionRpg\ActionRPG\obj\Debug\ActionRPG.exe
+E:\ActionRpg\ActionRPG\obj\Debug\ActionRPG.pdb
+E:\ActionRpg\ActionRPG\bin\Debug\ActionRPG.exe
+E:\ActionRpg\ActionRPG\bin\Debug\ActionRPG.pdb
+E:\ActionRpg\ActionRPG\obj\Debug\ResolveAssemblyReference.cache
+E:\ActionRpg\ActionRPG\obj\Debug\ActionRPG.Form1.resources
+E:\ActionRpg\ActionRPG\obj\Debug\ActionRPG.Properties.Resources.resources
+E:\ActionRpg\ActionRPG\obj\Debug\ResGen.read.1.tlog
+E:\ActionRpg\ActionRPG\obj\Debug\ResGen.write.1.tlog
+D:\ActionRpg\ActionRpg\ActionRPG\obj\Debug\ActionRPG.exe
+D:\ActionRpg\ActionRpg\ActionRPG\obj\Debug\ActionRPG.pdb
