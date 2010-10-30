@@ -6,3 +6,12 @@ C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\ActionRPG\ActionRPG\obj\Debug\ActionRPG.Form1.resources
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\ActionRPG\ActionRPG\obj\Debug\ActionRPG.Properties.Resources.resources
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\ActionRPG\ActionRPG\obj\Debug\ActionRPG.csproj.GenerateResource.Cache
+D:\ActionRpg\ActionRpg\ActionRPG\obj\Debug\ActionRPG.exe
+D:\ActionRpg\ActionRpg\ActionRPG\obj\Debug\ActionRPG.pdb
+D:\ActionRpg\ActionRpg\ActionRPG\bin\Debug\ActionRPG.exe
+D:\ActionRpg\ActionRpg\ActionRPG\bin\Debug\ActionRPG.pdb
+D:\ActionRpg\ActionRpg\ActionRPG\obj\Debug\ResolveAssemblyReference.cache
+D:\ActionRpg\ActionRpg\ActionRPG\obj\Debug\ActionRPG.Form1.resources
+D:\ActionRpg\ActionRpg\ActionRPG\obj\Debug\ActionRPG.Properties.Resources.resources
+D:\ActionRpg\ActionRpg\ActionRPG\obj\Debug\ResGen.read.1.tlog
+D:\ActionRpg\ActionRpg\ActionRPG\obj\Debug\ResGen.write.1.tlog
