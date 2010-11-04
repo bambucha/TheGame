@@ -15,3 +15,12 @@ D:\ActionRpg\ActionRpg\ActionRPG\obj\Debug\ActionRPG.Form1.resources
 D:\ActionRpg\ActionRpg\ActionRPG\obj\Debug\ActionRPG.Properties.Resources.resources
 D:\ActionRpg\ActionRpg\ActionRPG\obj\Debug\ResGen.read.1.tlog
 D:\ActionRpg\ActionRpg\ActionRPG\obj\Debug\ResGen.write.1.tlog
+D:\ActionRpg\ActionRPG\obj\Debug\ActionRPG.exe
+D:\ActionRpg\ActionRPG\obj\Debug\ActionRPG.pdb
+D:\ActionRpg\ActionRPG\obj\Debug\ResolveAssemblyReference.cache
+D:\ActionRpg\ActionRPG\obj\Debug\ActionRPG.Properties.Resources.resources
+D:\ActionRpg\ActionRPG\obj\Debug\ResGen.read.1.tlog
+D:\ActionRpg\ActionRPG\obj\Debug\ResGen.write.1.tlog
+D:\ActionRpg\ActionRPG\obj\Debug\ActionRPG.MainForm.resources
+D:\ActionRpg\ActionRPG\bin\Debug\ActionRPG.exe
+D:\ActionRpg\ActionRPG\bin\Debug\ActionRPG.pdb
